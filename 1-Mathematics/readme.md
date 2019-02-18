@@ -37,4 +37,74 @@
        We get, <br>
        &nbsp;&nbsp;&nbsp;&nbsp; f(k+1) =  C<sub>1</sub>f(k) + C<sub>2</sub>f(k-1) + C<sub>3</sub>f(k-2) + ... + C<sub>k</sub>f(1)
        <br> Hence T is,<br>
-        &nbsp;&nbsp;&nbsp;&nbsp; ![alt text](https://github.com/rohitmahor/competitive-programming/blob/master/images/t.png)
+        &nbsp;&nbsp;&nbsp;&nbsp; **T =** ![alt text](https://github.com/rohitmahor/competitive-programming/blob/master/images/t.png)
+
+   4. Determine F(n) <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; F<sub>2</sub> = TF<sub>1</sub><br>
+      &nbsp;&nbsp;&nbsp;&nbsp; F<sub>3</sub> = TF<sub>2</sub><br>
+      &nbsp;&nbsp;&nbsp;&nbsp; F<sub>n</sub> = TF<sub>n-1</sub><br>
+
+      **Note:** For computing T<sup>n-1</sup> use squaring method that works in O(logn)
+
+      **Time to try:**<br>
+       * [SEQ](https://spoj.com/problems/SEQ/) <br>
+       * [SPP](https://spoj.com/problems/SPP/) <br>
+       * Finding out nth fibonacci number for very large 'n' ( <= 10<sup>18</sup>)
+
+# 3. Based on Pigeonhole Principle
+
+## Principle
+If number of pigeons is greater than holes then there wil be at least one hole which contain at least two pigeons.
+
+## Time to try
+* [Divisible Subset](https://www.codechef.com/problems/DIVSUBS)
+* [The Gray Code Similar](https://www.codechef.com/problems/GRAYSC)
+* [Holiday Accommodation](https://spoj.com/problems/HOLI/) 
+
+# 4. The Inclusion-Exclusion Principle
+
+Every group of objects A can be associated with a quantity - denoted |A| - called the number of elements in A.<br>
+If X = A∪B and A∩B = Ø, then |X| = |A| + |B|.<br>
+If A and B are not disjoint, we get the simplest form of the Inclusion-Exclusion Principle:<br>
+1. |A∪B| = |A| + |B| - |A∩B|.
+2. |A∪B∪C| = |A| + |B| + |C| - |A∩B| - |B∩C| - |A∩C| + |A∩B∩C|
+
+**Example**<br>
+&nbsp;&nbsp;&nbsp;&nbsp; How many number are there less than 10<sup>9</sup> such that composite but not divisble by 2, 3 or 5.<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; **Solution Approach**
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |A| = numbers divisible by 2
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |B| = numbers divisible by 3
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |C| = numbers divisible by 5
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |A∩B| = numbers divisible by 2 & 3
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |B∩C| = numbers divisible by 3 & 5
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |A∩C| = numbers divisible by 2 & 5
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Required answer** = (10<sup>9</sup>-1) - |A∪B∪C|
+
+**Note** :- We can also compute by using Bitmasks:
+
+**Pseudocode using Bitmasks**
+```
+arr = {2,3,5};
+|AUBUC| = 0;
+for mask = 1 to 2^3:
+       temp = 1;
+       numBit = CountBits(mask);
+       currMask = mask;
+       pos = 0;
+       while(currMask > 0):
+              if(currMask&1 == 1): //if last bit of currMask is set
+                     temp = temp*a[pos];
+              currMask = currMask >> 1;
+              pos++;
+
+       if(numBit%2 == 1): //if numBit is odd
+              |AUBUC| += (10^9-1)/temp;
+       else
+              |AUBUC| -= (10^9-1)/temp;
+
+return (10^9-1) - |AUBUC|;
+```
+
+       
