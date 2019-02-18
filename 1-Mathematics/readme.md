@@ -1,6 +1,6 @@
 # 1. Birthday Paradox (Probability)
 ## Problem Statement:
-    What is the minimum number of people that should be present in a room so that there's 50% chance of two people having same birthday ?
+    What is the minimum number of people that should be present in a room so that there's 50% chance of two people having same birthday?
 
 ## Solution Approach
     1. probability of two people having same birthday is equal to 1 - probability of all people have different birthday.
@@ -20,6 +20,6 @@
 # 2. Solving Linear Recurrences
     It is possible to solve with dynamic programming if n is small, problem arise when n is larger than 10^8.
 
-    __We can solve linear recurrence in simple 4 steps__
+    **We can solve linear recurrence in simple 4 steps**
 
     
