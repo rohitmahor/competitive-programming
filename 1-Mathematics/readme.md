@@ -37,4 +37,4 @@
        We get, <br>
        &nbsp;&nbsp;&nbsp;&nbsp; f(k+1) =  C<sub>1</sub>f(k) + C<sub>2</sub>f(k-1) + C<sub>3</sub>f(k-2) + ... + C<sub>k</sub>f(1)
        <br> Hence T is,<br>
-        &nbsp;&nbsp;&nbsp;&nbsp; ![alt text](F:\t.png)
+        &nbsp;&nbsp;&nbsp;&nbsp; ![alt text](https://github.com/rohitmahor/competitive-programming/blob/master/images/t.png)
