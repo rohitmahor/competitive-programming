@@ -23,12 +23,12 @@
    **Example of linear recurrence** f(i) = f(i-1)*f(i-1)
 
    **We can solve linear recurrence in simple 4 steps**
-   1. Determine K, Number of terms on which f(i) depends <br> **For Exapmle**<br> f(i) = f(i-1) + 3f(i-6) has K = 6<br>
+   1. **Determine K, Number of terms on which f(i) depends** <br> **For Exapmle**<br> f(i) = f(i-1) + 3f(i-6) has K = 6<br>
    For better understanding, It can be rewritten as f(i) = f(i-1) + 0f(i-2) + 0f(i-3) + 0f(i-4) + 0f(i-5) + 3f(i-6)
 
-   2. Precompute f(i) upto K and store it in 1-D array as F<sub>0</sub>
+   2. **Precompute f(i) upto K and store it in 1-D array as F<sub>0</sub>**
 
-   3. Determine transformation matrix T, Such that<br>
+   3. **Determine transformation matrix T, Such that**<br>
        **TF<sub>i</sub> = F<sub>i+1</sub>**
        <br>Suppose,<br>
        &nbsp;&nbsp;&nbsp;&nbsp; f(i) = C<sub>1</sub>f(i-1) + C<sub>2</sub>f(i-2) + C<sub>3</sub>f(i-3) + ... + C<sub>k</sub>f(i-k) ...............(1)  <br>
@@ -39,7 +39,7 @@
        <br> Hence T is,<br>
         &nbsp;&nbsp;&nbsp;&nbsp; **T =** ![alt text](https://github.com/rohitmahor/competitive-programming/blob/master/images/t.png)
 
-   4. Determine F(n) <br>
+   4. **Determine F(n)** <br>
       &nbsp;&nbsp;&nbsp;&nbsp; F<sub>2</sub> = TF<sub>1</sub><br>
       &nbsp;&nbsp;&nbsp;&nbsp; F<sub>3</sub> = TF<sub>2</sub><br>
       &nbsp;&nbsp;&nbsp;&nbsp; F<sub>n</sub> = TF<sub>n-1</sub><br>
@@ -53,10 +53,10 @@
 
 # 3. Based on Pigeonhole Principle
 
-## Principle
+### Principle
 If number of pigeons is greater than holes then there wil be at least one hole which contain at least two pigeons.
 
-## Time to try
+### Time to try
 * [Divisible Subset](https://www.codechef.com/problems/DIVSUBS)
 * [The Gray Code Similar](https://www.codechef.com/problems/GRAYSC)
 * [Holiday Accommodation](https://spoj.com/problems/HOLI/) 
