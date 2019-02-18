@@ -1,8 +1,8 @@
 # 1. Birthday Paradox (Probability)
-## Problem Statement:
+### Problem Statement:
    What is the minimum number of people that should be present in a room so that there's 50% chance of two people having same birthday?
 
-## Solution Approach
+### Solution Approach
    1. probability of two people having same birthday is equal to 1 - probability of all people have different birthday.
 
    2. find how many people require in the room to have 50% chance all people have different birthdays.
@@ -13,7 +13,7 @@
        find n and n will be the answer.
 
 
-## Time to try
+### Time to try
    What is the minimum number of people that should be present in a room so that there's 99.9% chance of two people having same birthday ?
 
 
