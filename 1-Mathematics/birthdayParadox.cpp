@@ -27,4 +27,3 @@ int main(){
     cout <<"probability is "<<p<<" and Number of people are "<< people << endl;
     return 0;
 }
-
