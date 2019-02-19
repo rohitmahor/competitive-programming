@@ -1,15 +1,3 @@
-/*
- 
-    https://www.spoj.com/problems/SEQ/
- 
-    Sequence (ai) of natural numbers is defined as follows:
- 
-   ai = bi (for i <= k)
-   ai = c1ai-1 + c2ai-2 + ... + ckai-k (for i > k)
- 
-where bj and cj are given natural numbers for 1<=j<=k. Your task is to compute an for given n and output it modulo 109.
-*/
- 
 #include<bits/stdc++.h>
 #define MOD 1000000007
 using namespace std;
