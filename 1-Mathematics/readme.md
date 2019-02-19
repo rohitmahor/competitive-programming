@@ -49,7 +49,7 @@
       **Time to try:**<br>
        * [SEQ](https://spoj.com/problems/SEQ/) <br>
        * [SPP](https://spoj.com/problems/SPP/) <br>
-       * Finding out nth fibonacci number for very large 'n' ( <= 10<sup>18</sup>)
+       * [Finding out nth fibonacci number for very large 'n' ( <= 10<sup>18</sup>)](https://www.codechef.com/problems/SRTX16B)
 
 # 3. Based on Pigeonhole Principle
 
